@@ -1,5 +1,6 @@
 section .data
-    array dw 1, 2, 3, 4, 5      
+    array dw 1, 2, 3, 4, 5
+    array_length dw ($ - array)/4
     sum dw 0                    
 
 section .text
@@ -10,6 +11,7 @@ _start:
     xor ax, ax                  ; clear ax register
     
 sum_loop:
+    mov edi, array_length
     add ax, [esi]               
     add esi, 4                  ; move to the next element (each element is 4 bytes)
     loop sum_loop               
