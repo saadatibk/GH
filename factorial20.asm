@@ -7,8 +7,6 @@ _start:
     call exit_program
 
 factorial:
-                         ; Input: rdi (number whose factorial is to be found)
-                         ; Output: rax (factorial of the input number)
     mov rax, 1           
     cmp rdi, 1           ; Check if input is 1
     jbe .factorial_done  ; If input is 1, jump to the end
