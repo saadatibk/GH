@@ -13,7 +13,8 @@ factorial:
     cmp rdi, 1           ; Check if input is 1
     jbe .factorial_done  ; If input is 1, jump to the end
 
-    .factorial_loop:
+    .factorial_loop: 
+
         imul rax, rdi    
         dec rdi          
         cmp rdi, 1         ; Check if current number is 1
